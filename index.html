@@ -1,0 +1,99 @@
+<html>
+    <!-- for styling -->
+<body style="background-color:grey;">
+<style>
+    .table {align: center;}
+    .title{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+    width: 210px;
+    color:#ff4456;
+    border: solid black 1px;
+    }
+    button
+    {
+    border-radius: 10px;
+    background-color:#ff4456;
+    color: black;
+    border-color:#ff4456 ;
+    width:100px;
+    height:100px;
+    }
+    input[type="button"]
+    {
+    border-radius: 10px;
+    background-color:#ff4456;
+    color: black;
+    border-color:#ff4456 ;
+    width:100px;
+    height:100px;
+    font-size: larger;
+    }
+    input[type="text"]
+    {
+    border-radius: 10px;
+    text-align: right;
+    background-color:white;
+    border-color: black ;
+    width:100%
+    }
+    </style>
+    <script>
+        //function for displaying values
+        function dis(val)
+        {
+        document.getElementById("edu").value+=val
+         }
+        //function for evaluation
+        function solve()
+        {
+        let x = document.getElementById("edu").value
+        let y = eval(x)
+        document.getElementById("edu").value = y
+        }
+        //function for clearing the display
+        function clr()
+        {
+        document.getElementById("edu").value = ""
+        }
+        </script>
+    
+    <body>
+        <div class = title >JavaScript Calculator</div>
+        <table align="center" border="1">
+        <tr>
+        <td><input type="button" value="c" onclick="clr()"/> </td>
+        <td colspan="3"><input type="text" id="edu"/></td>
+        <!-- clr() function will call clr to clear all value -->
+        </tr>
+        <tr>
+        <!-- creating buttons and assigning values-->
+        <td><input type="button" value="+" onclick="dis('+')"/> </td>
+        <td><button onclick="dis('1')"> <img src="1.png"> </button></td>
+        <td><button onclick="dis('2')"> <img src="2.png"> </button></td>
+        <td><button onclick="dis('3')"> <img src="3.png"> </button></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="-" onclick="dis('-')"/> </td>
+        <td><button onclick="dis('4')"> <img src="4.png"> </button></td>
+        <td><button onclick="dis('5')"> <img src="5.png"> </button></td>
+        <td><button onclick="dis('6')"> <img src="6.png"> </button></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="*" onclick="dis('*')"/> </td>
+        <td><button onclick="dis('7')"> <img src="7.png"> </button> </td>
+        <td><button onclick="dis('8')"> <img src="8.png"> </button> </td>
+        <td><button onclick="dis('9')"> <img src="9.png"> </button> </td>
+        </tr>
+        <tr>
+        <td><input type="button" value="/" onclick="dis('/')"/> </td>
+        <td><input type="button" value="." onclick="dis('.')"/> </td>
+        <td><button onclick="dis('0')"> <img src="0.png"> </button></td>
+        <!-- Evaluating function call eval()-->
+        <td><input type="button" value="=" onclick="solve()"/> </td>
+        </tr>
+        </table>
+        </body>
+    
+</html>
